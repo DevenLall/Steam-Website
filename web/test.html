@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEAM TEAM INFORMATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars on body */
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the whole background */
+            z-index: 0; /* Place the video behind the content */
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            z-index: 1; /* Ensure content is above video */
+            padding: 20px;
+            color: white; /* Change text color for contrast */
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Allow vertical scrolling */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+        }
+        .button-row {
+            display: flex; /* Align cards horizontally */
+            justify-content: center; /* Center align cards */
+            flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+            margin: 20px 0; /* Space above and below the card row */
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 225px;
+            height: 325px; /* Increased height for better layout */
+            margin: 10px; /* Space between cards */
+            perspective: 1000px; /* 3D effect */
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hide back side when facing front */
+        }
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .flip-card img {
+            width: 100%;
+            height: 100%; /* Ensure image fills the front */
+            object-fit: cover;
+        }
+        button {
+            color: white;
+            background: none; /* No background */
+            border: none; /* No border */
+            padding: 0; /* No padding */
+            margin: 0; /* No margin */
+            cursor: pointer; /* Pointer cursor */
+            font-size: inherit; /* Inherit font size */
+            position: relative; /* Position relative for click handling */
+            z-index: 2; /* Ensure it's above the text */
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="webvid.mp4" type="video/mp4"> <!-- .mp4 video source -->
+    </video>
+    
+    <div id="page1" class="container" style="display: flex;">
+        <h1>Welcome to STE<strong><button onclick="alert('Button Clicked!')">A</button></strong>M INFORMATION</h1>
+        <p>Click on the photos below to learn more about us!</p>
+
+        <div class="button-row">
+            <a href="Mikayla.html" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="2H9A0023.JPG" alt="Mikayla">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Mikayla</h1>
+                        <p>Hey my name is Mikayla Remolacio, and I am starting my first year of Computer Engineering at Humber College, I was in Electromechanical Engineering. I have been working at the STEAM Lab for 2 years, creating, programming, building and designing projects.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="Dora.html" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="IMG_9592.JPG" alt="Dora">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Dora</h1>
+                        <p>Hey my name is Dora Mari Rushaj, and I am entering into my last year of Electronics Engineering at Humber College, I have been working at the STEAM Lab for 2 years, programming, creating, building and documenting projects.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="Deven.html" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="2H9A0014.JPG" alt="Deven">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Deven</h1>
+                        <p>Hello my name is Deven Lall, and I am entering into my second year of Electromechanical Engineering at Humber College, I have been working at the STEAM Lab for 5 months, programming, creating and building projects.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="Reyhan.html" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="Screenshot_25-9-2024_17525_teams.microsoft.com.jpeg" alt="Reyhan">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Reyhan</h1>
+                        <p>Hello my name is Reyhan Tressler entering into my second year of Electromechanical Engineering at Humber College, I have been working at the STEAM Lab for 5 months, programming, creating and designing projects.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="Andrew.html" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="787711b2-b248-4eda-9637-b0d12cea9f20.jpg" alt="Andrew">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Andrew</h1>
+                        <p>Hello my name is Andrew Allan, and I am entering into my second year of Electromechanical Engineering at Humber College, I have been working at the STEAM Lab for 5 months, designing, creating and building projects.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
